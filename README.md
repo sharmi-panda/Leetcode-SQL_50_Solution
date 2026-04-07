@@ -496,9 +496,10 @@ AS SecondHighestSalary
  
 [1517. Find Users With Valid E-Mails](https://leetcode.com/problems/find-users-with-valid-e-mails)
 ```sql
-SELECT *
+SELECT user_id, name, mail
 FROM Users
-WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9_\.\-]*@leetcode\\.com$'
+WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$'
+AND mail LIKE BINARY '%@leetcode.com';
 ```
 
 [1204. Last Person to Fit in the Bus](https://leetcode.com/problems/last-person-to-fit-in-the-bus/)
